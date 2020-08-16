@@ -25,3 +25,56 @@
 
 第一周学的一个套路：
 在做数组移动元素的题目时，在不允许额外的空间辅助时，一般采用双指针的解法就能解决问题，双指针有同方向的快慢指针，有相反方向的向中间夹逼法；
+
+
+
+## 二叉树的前中后序遍历
+
+```java
+// 前序遍历
+void search(node) {
+    visited(node);
+    search(node.left);
+    search(node.right);
+}
+// 中序遍历
+void search(node) {
+    search(node.left);
+    visited(node);
+    search(node.right);
+}
+// 后序遍历
+void search(node) {
+    search(node.left);
+    search(node.right);
+    visited(node);
+}
+```
+
+## 递归代码模板
+思维要点
+- 不要人肉递归
+- 找到最近最简方法，将问题拆解成可以重复解决的问题（重复子问题，找重复性）
+- 数学归纳法
+```java
+void recursion(level,param) {
+    // terminator
+    if(level > MAX) return;
+    // process curr level
+
+    // dirll down 
+    recursion(level + 1,param);
+    // resver curr state
+}
+
+```
+
+## 深度优先搜索
+```java
+ void dfs(node) {
+     if(node.children == null) {
+         return;
+     }
+ }
+
+```
